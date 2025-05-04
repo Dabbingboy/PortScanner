@@ -33,6 +33,8 @@ def parse_ports(ports_input):
         else:
             ports.add(int(i))
     return sorted(ports)
+#This if statement is important otherwise when this program is imported to another code as module,
+#it will start to throw errors, as the following line of code needs to only work when this program is executed in a CLI
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="TCP port scanner")
     parser.add_argument("host", help= "Target IP address or Domain")
